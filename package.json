@@ -1,0 +1,56 @@
+{
+  "name": "nyt-headline-case",
+  "version": "0.1.0",
+  "description": "TypeScript library for converting text to NYT-style headline case",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "headline",
+    "title-case",
+    "nyt",
+    "new-york-times",
+    "capitalization",
+    "formatting",
+    "text",
+    "typescript"
+  ],
+  "author": "David Yee",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangentialism/nyt-headline-case.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tangentialism/nyt-headline-case/issues"
+  },
+  "homepage": "https://github.com/tangentialism/nyt-headline-case#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
