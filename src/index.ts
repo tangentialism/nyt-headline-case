@@ -112,7 +112,14 @@ function capitalizeWord(word: string): string {
 export const NYT_HEADLINE_CONFIG = {
   // Words that should always be capitalized (regardless of length)
   ALWAYS_CAPITALIZE: [
-    'i', 'is', 'it', 'no', 'nor', 'not', 'off', 'out', 'so', 'up', 'yet'
+    // Single letter pronouns
+    'i',
+    // Two-letter verbs
+    'am', 'be', 'do', 'go', 'is',
+    // Two-letter pronouns
+    'he', 'it', 'me', 'my', 'us', 'we',
+    // Two/three-letter adverbs and other words
+    'no', 'nor', 'not', 'off', 'out', 'so', 'up', 'was', 'yet'
   ] as string[],
   
   // Words that should always be lowercase (unless first/last word or after dash/colon)

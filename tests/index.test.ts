@@ -222,12 +222,12 @@ describe('toNYTHeadlineCase', () => {
       expect(toNYTHeadlineCase('what i believe')).toBe('What I Believe');
     });
 
-    it('should lowercase "me" in middle position', () => {
-      expect(toNYTHeadlineCase('tell me more')).toBe('Tell me More');
+    it('should capitalize "me" (pronoun) in middle position', () => {
+      expect(toNYTHeadlineCase('tell me more')).toBe('Tell Me More');
     });
 
-    it('should lowercase "we" in middle position', () => {
-      expect(toNYTHeadlineCase('where we go')).toBe('Where we Go');
+    it('should capitalize "we" (pronoun) in middle position', () => {
+      expect(toNYTHeadlineCase('where we go')).toBe('Where We Go');
     });
 
     it('should capitalize "is" (always-capitalize list)', () => {
@@ -246,8 +246,8 @@ describe('toNYTHeadlineCase', () => {
 
     it('should handle comma-separated words', () => {
       // Current behavior: comma doesn't trigger capitalization
-      // "we" is treated as middle word (2-letter, not in capitalize list)
-      expect(toNYTHeadlineCase('yes, we can')).toBe('Yes, we Can');
+      // "we" is now capitalized as a pronoun
+      expect(toNYTHeadlineCase('yes, we can')).toBe('Yes, We Can');
     });
 
     it('should handle multiple punctuation marks', () => {
