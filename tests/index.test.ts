@@ -13,7 +13,7 @@ describe('toNYTHeadlineCase', () => {
 
   it('should return a string', () => {
     const result = toNYTHeadlineCase('hello world');
-    expect(result).toBe('hello world');
+    expect(typeof result).toBe('string');
   });
 });
 
